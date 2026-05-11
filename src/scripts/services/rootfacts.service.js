@@ -89,7 +89,7 @@ class RootFactsService {
     // }
 
     if (!sanitized) {
-			return 'Describe ${vegetable} vegetable with a style of language ${tone}';
+			return `Describe ${vegetable} vegetable with a style of language ${tone}`;
 		}
 
     const personaFn = this.config.personas[tone] || this.config.personas.normal;
