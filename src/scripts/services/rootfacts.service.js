@@ -84,9 +84,13 @@ class RootFactsService {
       .trim()
       .slice(0, this.config.maxInputLength);
 
+    // if (!sanitized) {
+    //   return "Tell me an interesting fact about vegetables:";
+    // }
+
     if (!sanitized) {
-      return "Tell me an interesting fact about vegetables:";
-    }
+			return "Describe ${vegetable} vegetable with a style of language ${tone}";
+		}
 
     const personaFn = this.config.personas[tone] || this.config.personas.normal;
     return personaFn(sanitized);
